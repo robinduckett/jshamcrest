@@ -1,0 +1,6 @@
+commit 6243bee35ada922b6915ea8acba37ca614259bd9
+Author: Daniel Fernandes Martins <daniel.tritone@gmail.com>
+Date:   Sat Apr 14 01:46:19 2012 -0300
+
+    Deploying to gh-pages.
+

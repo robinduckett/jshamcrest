@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; JsHamcrest 0.6.7 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.6.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="JsHamcrest 0.6.7 documentation" href="index.html" />
+    <link rel="next" title="Uses Of JsHamcrest" href="uses.html" />
+    <link rel="prev" title="JsHamcrest – Library of matcher objects for JavaScript" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uses.html" title="Uses Of JsHamcrest"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="JsHamcrest – Library of matcher objects for JavaScript"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">JsHamcrest 0.6.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>The first thing to do is download the JsHamcrest source file. You can find the
+download links at the <a class="reference internal" href="index.html#doc-index"><em>index</em></a> page.</p>
+<div class="section" id="setting-up-the-first-example">
+<h2>Setting Up The First Example<a class="headerlink" href="#setting-up-the-first-example" title="Permalink to this headline">¶</a></h2>
+<p>To be able to use JsHamcrest inside the browser, all you have to do is link the
+source file from within your HTML file. For example, create a new file with the
+following content and open it on your web browser of choice:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Page title<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;path/to/jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+        <span class="kd">var</span> <span class="nx">odd</span> <span class="o">=</span> <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Matchers</span><span class="p">.</span><span class="nx">odd</span><span class="p">();</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">odd</span><span class="p">.</span><span class="nx">matches</span><span class="p">(</span><span class="mi">11</span><span class="p">));</span> <span class="c1">// Expected: true</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>If an alert message &#8220;true&#8221; pops up when you open the page, then
+congratulations!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Don&#8217;t forget to change the 4th line to make it point to your actual
+JsHamcrest source file.</p>
+</div>
+</div>
+<div class="section" id="jshamcrest-outside-the-web-browser">
+<h2>JsHamcrest Outside The Web Browser<a class="headerlink" href="#jshamcrest-outside-the-web-browser" title="Permalink to this headline">¶</a></h2>
+<p>Since JsHamcrest doesn&#8217;t depend on any browser-specific JavaScript features
+(like <tt class="xref py py-attr docutils literal"><span class="pre">document</span></tt>, <tt class="xref py py-attr docutils literal"><span class="pre">window</span></tt>, and so on), you should be able to use
+it with any modern stand-alone JavaScript interpreter.</p>
+<p>The snippet below shows how to reproduce the previous example using <a class="reference external" href="http://www.mozilla.org/rhino/">Rhino</a>,
+a <a class="reference external" href="http://java.sun.com/">Java</a>-based JavaScript interpreter/compiler developed by <a class="reference external" href="http://www.mozilla.org/">Mozilla</a>:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">js</span><span class="o">&gt;</span> <span class="nx">load</span><span class="p">(</span><span class="s1">&#39;path/to/jshamcrest.js&#39;</span><span class="p">)</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">odd</span> <span class="o">=</span> <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Matchers</span><span class="p">.</span><span class="nx">odd</span><span class="p">()</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="nx">odd</span><span class="p">.</span><span class="nx">matches</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="kc">true</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="nx">odd</span><span class="p">.</span><span class="nx">matches</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="kc">false</span>
+</pre></div>
+</div>
+<div class="section" id="understanding-the-code">
+<h3>Understanding The Code<a class="headerlink" href="#understanding-the-code" title="Permalink to this headline">¶</a></h3>
+<p>On the previous example, you saw the <a class="reference internal" href="modules/matchers.html#JsHamcrest.Matchers.odd" title="JsHamcrest.Matchers.odd"><tt class="xref py py-meth docutils literal"><span class="pre">JsHamcrest.Matchers.odd()</span></tt></a> function,
+which returns a <em>matcher object</em> that checks whether the given number is odd.
+In other words, a <em>matcher</em> is an object that determines whether two things are
+equivalent.</p>
+<p>Now try to figure out what the following matchers do:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// Make JsHamcrest matchers globally accessible</span>
+<span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">copyMembers</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+<span class="nx">equalTo</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">).</span><span class="nx">matches</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>       <span class="c1">// Expected: true</span>
+<span class="nx">between</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">and</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">matches</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>   <span class="c1">// Expected: true</span>
+<span class="nx">greaterThan</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">).</span><span class="nx">matches</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// Expected: true</span>
+</pre></div>
+</div>
+<p>To make things easier, try to read each statement backwards. For instance:</p>
+<ul class="simple">
+<li>...is 10 <strong>equal to</strong> &#8216;10&#8217;?</li>
+<li>...is 7 <strong>between</strong> 5 <strong>and</strong> 10?</li>
+<li>...is 4 <strong>greater than</strong> Math.PI?</li>
+</ul>
+<p>It&#8217;s not that hard after all, huh?</p>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="modules/matchers.html#module-JsHamcrest.Matchers" title="JsHamcrest.Matchers: Built-in matcher library."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Matchers</span></tt></a> namespace for the complete list of matchers.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#setting-up-the-first-example">Setting Up The First Example</a></li>
+<li><a class="reference internal" href="#jshamcrest-outside-the-web-browser">JsHamcrest Outside The Web Browser</a><ul>
+<li><a class="reference internal" href="#understanding-the-code">Understanding The Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">JsHamcrest &#8211; Library of matcher objects for JavaScript</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="uses.html"
+                        title="next chapter">Uses Of JsHamcrest</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/getting_started.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uses.html" title="Uses Of JsHamcrest"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="JsHamcrest – Library of matcher objects for JavaScript"
+             >previous</a> |</li>
+        <li><a href="index.html">JsHamcrest 0.6.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2011, Destaquenet Technology Solutions.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-761701-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Download The Latest Version}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Documentation Contents}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Getting Started}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Setting Up The First Example}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}JsHamcrest Outside The Web Browser}{5}{subsection.2.1.2}
+\contentsline {subsubsection}{Understanding The Code}{6}{subsubsection*.3}
+\contentsline {section}{\numberline {2.2}Uses Of JsHamcrest}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Unit Testing}{6}{subsection.2.2.1}
+\contentsline {subsubsection}{Mocking Frameworks}{7}{subsubsection*.4}
+\contentsline {subsection}{\numberline {2.2.2}Object Filtering}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Et Cetera}{8}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Writing Custom Matchers}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}A Basic Example}{8}{subsection.2.3.1}
+\contentsline {subsubsection}{Do I Need Custom Matchers?}{9}{subsubsection*.5}
+\contentsline {subsubsection}{Composing Matchers}{9}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.3.2}Learning By Example}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Distributing Your Custom Set Of Matchers}{10}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}JsHamcrest API Reference}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\texttt {JsHamcrest} --- Main Namespace}{11}{subsection.2.4.1}
+\contentsline {subsubsection}{\texttt {JsHamcrest.CombinableMatcher} Class}{11}{subsubsection*.10}
+\contentsline {subsubsection}{\texttt {JsHamcrest.Description} Class}{12}{subsubsection*.14}
+\contentsline {subsubsection}{\texttt {JsHamcrest.SimpleMatcher} Class}{13}{subsubsection*.22}
+\contentsline {subsection}{\numberline {2.4.2}\texttt {JsHamcrest.Matchers} --- Built-in Matchers}{13}{subsection.2.4.2}
+\contentsline {subsubsection}{Collection Matchers}{14}{subsubsection*.27}
+\contentsline {subsubsection}{Core Matchers}{15}{subsubsection*.35}
+\contentsline {subsubsection}{Number Matchers}{17}{subsubsection*.49}
+\contentsline {subsubsection}{Object Matchers}{19}{subsubsection*.61}
+\contentsline {subsubsection}{Text Matchers}{21}{subsubsection*.71}
+\contentsline {subsection}{\numberline {2.4.3}\texttt {JsHamcrest.Operators} --- Matcher Operators}{22}{subsection.2.4.3}
+\contentsline {subsubsection}{List Processing}{22}{subsubsection*.78}
+\contentsline {subsubsection}{Unit Testing}{23}{subsubsection*.80}
+\contentsline {subsection}{\numberline {2.4.4}\texttt {JsHamcrest.Integration} --- Third-Party Integration Utilities}{24}{subsection.2.4.4}
+\contentsline {subsubsection}{Unit Testing Frameworks}{24}{subsubsection*.86}
+\contentsline {paragraph}{Dummy Functions For Easy Prototyping}{24}{paragraph*.87}
+\contentsline {paragraph}{Jasmine -- BDD for your JavaScript}{25}{paragraph*.90}
+\contentsline {paragraph}{JsTestDriver -- Remote JavaScript Console}{26}{paragraph*.92}
+\contentsline {paragraph}{JsUnitTest -- JavaScript Unit Testing Framework}{26}{paragraph*.94}
+\contentsline {paragraph}{jsUnity -- Lightweight JavaScript Testing Framework}{27}{paragraph*.96}
+\contentsline {paragraph}{QUnit -- JavaScript Test Suite}{28}{paragraph*.98}
+\contentsline {paragraph}{screw-unit -- JavaScript BDD Framework}{28}{paragraph*.100}
+\contentsline {paragraph}{YUITest -- JavaScript Unit Testing Framework}{29}{paragraph*.102}
+\contentsline {section}{\numberline {2.5}Getting Involved}{30}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}How Do I Join The Team?}{30}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Contact Information}{30}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Changelog}{31}{section.2.6}
+\contentsline {chapter}{\numberline {3}Indices And Tables}{33}{chapter.3}
+\contentsline {chapter}{Python Module Index}{35}{section*.104}
+\contentsline {chapter}{Index}{37}{section*.105}

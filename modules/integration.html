@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JsHamcrest.Integration — Third-Party Integration Utilities &mdash; JsHamcrest 0.6.7 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.6.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="JsHamcrest 0.6.7 documentation" href="../index.html" />
+    <link rel="up" title="JsHamcrest API Reference" href="index.html" />
+    <link rel="next" title="Getting Involved" href="../getting_involved.html" />
+    <link rel="prev" title="JsHamcrest.Operators — Matcher Operators" href="operator.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../getting_involved.html" title="Getting Involved"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="operator.html" title="JsHamcrest.Operators — Matcher Operators"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">JsHamcrest 0.6.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">JsHamcrest API Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-JsHamcrest.Integration">
+<span id="jshamcrest-integration-third-party-integration-utilities"></span><h1><a class="reference internal" href="#module-JsHamcrest.Integration" title="JsHamcrest.Integration: Functions to allow easy integration with other libraries."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Integration</span></tt></a> &#8212; Third-Party Integration Utilities<a class="headerlink" href="#module-JsHamcrest.Integration" title="Permalink to this headline">¶</a></h1>
+<p>Provides functions to make it easy to integrate JsHamcrest with other popular
+JavaScript frameworks.</p>
+<dl class="function">
+<dt id="JsHamcrest.Integration.copyMembers">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">copyMembers</tt><big>(</big><span class="optional">[</span><em>source</em><span class="optional">]</span>, <em>target</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.copyMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all members of an object to another.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>source</strong> &#8211; <em>(Optional)</em> Source object. If not provided, this function will
+copy all members of <a class="reference internal" href="matchers.html#module-JsHamcrest.Matchers" title="JsHamcrest.Matchers: Built-in matcher library."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Matchers</span></tt></a> and
+<a class="reference internal" href="operator.html#module-JsHamcrest.Operators" title="JsHamcrest.Operators: Operator functions for matchers."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Operators</span></tt></a> to <em>target</em>.</li>
+<li><strong>target</strong> &#8211; Target object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="JsHamcrest.Integration.installMatchers">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">installMatchers</tt><big>(</big><em>matchersNamespace</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.installMatchers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all members of <em>matchersNamespace</em> to <a class="reference internal" href="matchers.html#module-JsHamcrest.Matchers" title="JsHamcrest.Matchers: Built-in matcher library."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Matchers</span></tt></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matchersName</strong> &#8211; Namespace that contains the matchers to be installed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="JsHamcrest.Integration.installOperators">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">installOperators</tt><big>(</big><em>operatorsNamespace</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.installOperators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all members of <em>operatorsNamespace</em> to <a class="reference internal" href="operator.html#module-JsHamcrest.Operators" title="JsHamcrest.Operators: Operator functions for matchers."><tt class="xref py py-mod docutils literal"><span class="pre">JsHamcrest.Operators</span></tt></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operatorsNamespace</strong> &#8211; Namespace that contains the operators to be
+installed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="unit-testing-frameworks">
+<h2>Unit Testing Frameworks<a class="headerlink" href="#unit-testing-frameworks" title="Permalink to this headline">¶</a></h2>
+<p>JsHamcrest is perfect to enhance your JavaScript testing code.</p>
+<div class="section" id="dummy-functions-for-easy-prototyping">
+<h3>Dummy Functions For Easy Prototyping<a class="headerlink" href="#dummy-functions-for-easy-prototyping" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.WebBrowser">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">WebBrowser</tt><big>(</big><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.WebBrowser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses the web browser&#8217;s <tt class="xref py py-meth docutils literal"><span class="pre">alert()</span></tt> function to display the assertion
+results. Great for quick prototyping:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- Activate dummy integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">WebBrowser</span><span class="p">();</span>
+
+    <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+    <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="JsHamcrest.Integration.Rhino">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">Rhino</tt><big>(</big><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.Rhino" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses the Rhino&#8217;s <tt class="xref py py-meth docutils literal"><span class="pre">print()</span></tt> function to display the assertion results.
+Great for quick prototyping:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">js</span><span class="o">&gt;</span> <span class="nx">load</span><span class="p">(</span><span class="s1">&#39;jshamcrest.js&#39;</span><span class="p">)</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">Rhino</span><span class="p">();</span>
+<span class="nx">js</span><span class="o">&gt;</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+<span class="nx">js</span><span class="o">&gt;</span> <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="p">[</span><span class="nx">SUCCESS</span><span class="p">]</span> <span class="nx">Expected</span> <span class="nx">equal</span> <span class="nx">to</span> <span class="mi">5</span><span class="o">:</span> <span class="nx">Success</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="jasmine-bdd-for-your-javascript">
+<h3>Jasmine &#8211; BDD for your JavaScript<a class="headerlink" href="#jasmine-bdd-for-your-javascript" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.jasmine">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">jasmine</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.jasmine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://pivotal.github.com/jasmine/">Jasmine</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- Jasmine dependencies --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;jasmine.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jasmine.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jasmine-html.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Activate Jasmine integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">jasmine</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">jasmine</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="k">this</span>
+    <span class="p">});</span>
+
+    <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Calculator&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">calc</span><span class="p">;</span>
+
+        <span class="nx">beforeEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+        <span class="p">});</span>
+
+        <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should add two numbers&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+   <span class="nx">jasmine</span><span class="p">.</span><span class="nx">getEnv</span><span class="p">().</span><span class="nx">addReporter</span><span class="p">(</span><span class="k">new</span> <span class="nx">jasmine</span><span class="p">.</span><span class="nx">TrivialReporter</span><span class="p">());</span>
+   <span class="nx">jasmine</span><span class="p">.</span><span class="nx">getEnv</span><span class="p">().</span><span class="nx">execute</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=this)</em> Copies all matchers to the given
+scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="jstestdriver-remote-javascript-console">
+<h3>JsTestDriver &#8211; Remote JavaScript Console<a class="headerlink" href="#jstestdriver-remote-javascript-console" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.JsTestDriver">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">JsTestDriver</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.JsTestDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://code.google.com/p/js-test-driver/">JsTestDriver</a>. Instructions on how to set up
+your project:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Let&#8217;s assume your project root directory have a <tt class="docutils literal"><span class="pre">lib</span></tt>
+directory to keep your project&#8217;s dependencies. In this case, copy
+the <tt class="docutils literal"><span class="pre">jshamcrest.js</span></tt> file to that directory;</p>
+</li>
+<li><p class="first">Create a file <tt class="docutils literal"><span class="pre">plugin/jshamcrest-plugin.js</span></tt> in
+your project root directory and put one of the following lines inside
+it:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">JsTestDriver</span><span class="p">();</span>
+
+<span class="c1">// Same as above</span>
+<span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">JsTestDriver</span><span class="p">({</span>
+    <span class="nx">scope</span><span class="o">:</span><span class="k">this</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Finally, edit the <tt class="docutils literal"><span class="pre">jsTestDriver.conf</span></tt> file as follows:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">load</span><span class="o">:</span>
+  <span class="o">-</span> <span class="nx">lib</span><span class="o">/*</span><span class="p">.</span><span class="nx">js</span>
+  <span class="o">-</span> <span class="o">&lt;</span><span class="nx">source</span> <span class="nx">directory</span><span class="o">&gt;</span>
+  <span class="o">-</span> <span class="o">&lt;</span><span class="nx">test</span> <span class="nx">cases</span> <span class="nx">directory</span><span class="o">&gt;</span>
+  <span class="o">-</span> <span class="nx">plugin</span><span class="o">/*</span><span class="p">.</span><span class="nx">js</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>That&#8217;s it. Your test cases should now have access to JsHamcrest functions:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">CalculatorTest</span> <span class="o">=</span> <span class="nx">TestCase</span><span class="p">(</span><span class="s1">&#39;CalculatorTest&#39;</span><span class="p">);</span>
+
+<span class="nx">CalculatorTest</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">testAdd</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+    <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=this)</em> Copies all matchers to the given
+scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="jsunittest-javascript-unit-testing-framework">
+<h3>JsUnitTest &#8211; JavaScript Unit Testing Framework<a class="headerlink" href="#jsunittest-javascript-unit-testing-framework" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.JsUnitTest">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">JsUnitTest</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.JsUnitTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://jsunittest.com/">JsUnitTest</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- JsUnitTest and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jsunittest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Activate JsUnitTest integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">JsUnitTest</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">JsUnitTest</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="nx">JsUnitTest</span><span class="p">.</span><span class="nx">Unit</span><span class="p">.</span><span class="nx">Testcase</span><span class="p">.</span><span class="nx">prototype</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="k">new</span> <span class="nx">Test</span><span class="p">.</span><span class="nx">Unit</span><span class="p">.</span><span class="nx">Runner</span><span class="p">({</span>
+        <span class="nx">setup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">},</span>
+
+        <span class="nx">tearDown</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">},</span>
+
+        <span class="nx">testAdd</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="kd">with</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+            <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+        <span class="p">}}</span>
+    <span class="p">},</span> <span class="p">{</span><span class="s1">&#39;testLog&#39;</span><span class="o">:</span><span class="s1">&#39;myLog&#39;</span><span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=JsUnitTest.Unit.Testcase.prototype)</em> Copies
+all matchers to the given scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="jsunity-lightweight-javascript-testing-framework">
+<h3>jsUnity &#8211; Lightweight JavaScript Testing Framework<a class="headerlink" href="#jsunity-lightweight-javascript-testing-framework" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.jsUnity">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">jsUnity</tt><big>(</big><em>{scope</em>, <em>attachAssertions}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.jsUnity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://jsunity.com/">jsUnity</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- jsUnity and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jsunity.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Activate jsUnity integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="kd">function</span> <span class="nx">CalculatorTestSuite</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">testAdd</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+            <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Activate the jsUnity integration</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">jsUnity</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">jsUnity</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="nx">jsUnity</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">defaultScope</span><span class="p">,</span>
+        <span class="nx">attachAssertions</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">});</span>
+
+    <span class="kd">var</span> <span class="nx">results</span> <span class="o">=</span> <span class="nx">jsUnity</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">CalculatorTestSuite</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scope</strong> &#8211; <em>(Optional, default=jsUnity.env.defaultScope)</em> Copies
+all matchers to the given scope.</li>
+<li><strong>attachAssertions</strong> &#8211; <em>(Optional, default=false)</em> Whether JsHamcrest should
+also copy jsUnity&#8217;s assertion functions to the given
+scope.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="qunit-javascript-test-suite">
+<h3>QUnit &#8211; JavaScript Test Suite<a class="headerlink" href="#qunit-javascript-test-suite" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.QUnit">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">QUnit</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.QUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://docs.jquery.com/QUnit">QUnit</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- QUnit and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Activate QUnit integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">QUnit</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">QUnit</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="k">this</span>
+    <span class="p">});</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Calculator should add two numbers&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+            <span class="nx">assertThat</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- QUnit and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;testrunner.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=this)</em> Copies all matchers to the given
+scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="screw-unit-javascript-bdd-framework">
+<h3>screw-unit &#8211; JavaScript BDD Framework<a class="headerlink" href="#screw-unit-javascript-bdd-framework" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.screwunit">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">screwunit</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.screwunit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://github.com/nathansobo/screw-unit">screw-unit</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- screw-unit and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery-1.2.6.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.fn.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.print.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;screw.builder.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;screw.matchers.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;screw.events.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;screw.behaviors.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;screw.css&quot;</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Activate screw-unit integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">screwunit</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">screwunit</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="nx">Screw</span><span class="p">.</span><span class="nx">Matchers</span>
+    <span class="p">});</span>
+
+    <span class="nx">Screw</span><span class="p">.</span><span class="nx">Unit</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Using JsHamcrest assertions in Screw.Unit&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should succeed&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">assertThat</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nx">between</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">and</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;This assertion must succeed&#39;</span><span class="p">);</span>
+            <span class="p">});</span>
+
+            <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should fail&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">assertThat</span><span class="p">([],</span> <span class="nx">not</span><span class="p">(</span><span class="nx">empty</span><span class="p">()),</span> <span class="s1">&#39;This assertion must fail&#39;</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=Screw.Matchers)</em> Copies all matchers to the
+given scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="yuitest-javascript-unit-testing-framework">
+<h3>YUITest &#8211; JavaScript Unit Testing Framework<a class="headerlink" href="#yuitest-javascript-unit-testing-framework" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="JsHamcrest.Integration.YUITest">
+<tt class="descclassname">JsHamcrest.Integration.</tt><tt class="descname">YUITest</tt><big>(</big><em>{scope}</em><big>)</big><a class="headerlink" href="#JsHamcrest.Integration.YUITest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrates JsHamcrest with <a class="reference external" href="http://developer.yahoo.com/yui/yuitest/">YUITest</a>.</p>
+<p>The following code is an example on how to set up your project:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- YUITest and dependencies --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;yahoo-dom-event/yahoo-dom-event.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;yuilogger/logger.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;yuitest/yuitest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Activate YUITest integration --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jshamcrest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">YUITest</span><span class="p">();</span>
+
+    <span class="c1">// Same as above</span>
+    <span class="nx">JsHamcrest</span><span class="p">.</span><span class="nx">Integration</span><span class="p">.</span><span class="nx">YUITest</span><span class="p">({</span>
+        <span class="nx">scope</span><span class="o">:</span> <span class="k">this</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+    <span class="nx">CalculatorTestCase</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">YAHOO</span><span class="p">.</span><span class="nx">tool</span><span class="p">.</span><span class="nx">TestCase</span><span class="p">({</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Calculator test case&#39;</span><span class="p">,</span>
+
+        <span class="nx">setUp</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">},</span>
+
+        <span class="nx">teardown</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">},</span>
+
+        <span class="nx">testAdd</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyCalculator</span><span class="p">();</span>
+            <span class="nx">Assert</span><span class="p">.</span><span class="nx">that</span><span class="p">(</span><span class="nx">calc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nx">equalTo</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scope</strong> &#8211; <em>(Optional, default=this)</em> Copies all matchers to the given
+scope.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Nothing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="index.html#apiref"><em>JsHamcrest API Reference</em></a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">JsHamcrest.Integration</span></tt> &#8212; Third-Party Integration Utilities</a><ul>
+<li><a class="reference internal" href="#unit-testing-frameworks">Unit Testing Frameworks</a><ul>
+<li><a class="reference internal" href="#dummy-functions-for-easy-prototyping">Dummy Functions For Easy Prototyping</a></li>
+<li><a class="reference internal" href="#jasmine-bdd-for-your-javascript">Jasmine &#8211; BDD for your JavaScript</a></li>
+<li><a class="reference internal" href="#jstestdriver-remote-javascript-console">JsTestDriver &#8211; Remote JavaScript Console</a></li>
+<li><a class="reference internal" href="#jsunittest-javascript-unit-testing-framework">JsUnitTest &#8211; JavaScript Unit Testing Framework</a></li>
+<li><a class="reference internal" href="#jsunity-lightweight-javascript-testing-framework">jsUnity &#8211; Lightweight JavaScript Testing Framework</a></li>
+<li><a class="reference internal" href="#qunit-javascript-test-suite">QUnit &#8211; JavaScript Test Suite</a></li>
+<li><a class="reference internal" href="#screw-unit-javascript-bdd-framework">screw-unit &#8211; JavaScript BDD Framework</a></li>
+<li><a class="reference internal" href="#yuitest-javascript-unit-testing-framework">YUITest &#8211; JavaScript Unit Testing Framework</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="operator.html"
+                        title="previous chapter"><tt class="docutils literal"><span class="pre">JsHamcrest.Operators</span></tt> &#8212; Matcher Operators</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../getting_involved.html"
+                        title="next chapter">Getting Involved</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/modules/integration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../getting_involved.html" title="Getting Involved"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="operator.html" title="JsHamcrest.Operators — Matcher Operators"
+             >previous</a> |</li>
+        <li><a href="../index.html">JsHamcrest 0.6.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" >JsHamcrest API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2011, Destaquenet Technology Solutions.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-761701-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>
