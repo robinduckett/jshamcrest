@@ -7,8 +7,8 @@
  * Copyright (c) 2009-2010 Daniel Fernandes Martins
  * Licensed under the BSD license.
  *
- * Revision: 6243bee35ada922b6915ea8acba37ca614259bd9
- * Date:     Sat Apr 14 01:46:19 2012 -0300
+ * Revision: dd0a8b99770511673012ee3d1418b99cf30a21f7
+ * Date:     Sat Apr 14 02:02:00 2012 -0300
  */
  
 var JsHamcrest = {
